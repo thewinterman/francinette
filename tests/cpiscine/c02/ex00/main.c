@@ -6,12 +6,16 @@
 /*   By: fsoares- <fsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:37:02 by fsoares-          #+#    #+#             */
-/*   Updated: 2021/12/20 19:35:02 by fsoares-         ###   ########.fr       */
+/*   Updated: 2024/06/22 17:45:51 by mattwint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <strings.h>
+#ifdef __linux__
+	#include <bsd/string.h>
+#elif __APPLE__
+	#include <string.h>
+#endif
 
 char	*ft_strcpy(char *dest, char *src);
 
